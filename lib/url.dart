@@ -36,10 +36,15 @@ class _urlState extends State<url> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white70,
-          elevation: 30,
-        ),
+         appBar: PreferredSize(
+        preferredSize: Size.fromHeight(10.0),
+          child: AppBar(
+       automaticallyImplyLeading: false,
+          backgroundColor: Colors.transparent,
+            elevation: 0,// hides leading widget
+
+         )
+         ),
       body: WebView(
         initialUrl: 'http://saicollections.co',
         javascriptMode: JavascriptMode.unrestricted,
